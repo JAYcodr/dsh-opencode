@@ -1,0 +1,9 @@
+# 提交到 community 精选列表（awesome-dsh-plugin）的条目。
+# 目标路径：data/plugins/JAYcodr__dsh-opencode.yml
+# 前置：仓库已加 dsh-plugin topic、声明 dsh.bundle、创建满 1 天。
+url: https://github.com/JAYcodr/dsh-opencode
+name: JAYcodr/dsh-opencode
+category: usage
+description:
+  en: 'Floating OpenCode meter for the DSH Web UI: link latency, service status, Go plan allowance (5h / weekly / monthly) and a real inference probe (TTFT, billing source, allowance), plus usage and cost data.'
+  zh: '悬浮的 OpenCode 仪表：线路时延、服务状态、Go 套餐额度（5 小时 / 周 / 月）与真实推理探针（首字时延、计费来源、额度占用），另含用量与成本数据。'

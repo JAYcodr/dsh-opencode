@@ -134,6 +134,13 @@ node dev/client-check.mjs /tmp/ocsw-state.json
 
 `dev/` 的说明见 [dev/README.md](dev/README.md)；`dev/cache/` 是开发时落盘的公开样本，已被 `.gitignore` 排除，不参与运行也不入库。
 
+## 收录到 DSH 插件市场
+
+DSH 的市场读取用户配置的插件索引；要让别人搜到，有两条互补路径：
+
+1. **社区精选列表（推荐）**：向 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 提一个 PR，只加一个文件 —— `data/plugins/JAYcodr__dsh-opencode.yml`。条目内容已放在本仓库 [docs/awesome-entry.yml](docs/awesome-entry.yml)，分类用 `usage`。要求：仓库创建满 1 天、加上 `dsh-plugin` topic、`package.json` 声明 `dsh.bundle`（本仓库都满足）。合并后索引/站点自动重建，用户端把 awesome-dsh-plugin 索引加进 `plugin_market.indexes` 即可搜到。
+2. **npm 自动索引**：部分市场索引（如 "DSH Plugin Index"）每天自动扫描 npm 上可安装的 DSH bundle；发布 npm 包后会进入这份索引。注意：**npm 上的 `dsh-opencode` 已被其他作者占用**，若要发 npm 需要换一个包名（例如 `dsh-opencode-meter`），并把 `repository` 指回本仓库。仅收录到精选列表不依赖 npm。
+
 ## License
 
 [MIT](LICENSE) © 2026 JAYcodr
