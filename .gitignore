@@ -1,0 +1,16 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 开发时抓取的第三方公开样本（可重新生成，不入库）
+dev/cache/
+
+# 本地状态
+settings.json
+.env
+.env.*
+*.log
+*.tmp
+
+# macOS
+.DS_Store

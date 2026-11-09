@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode link meter",
+    "description": "A floating meter for opencode.ai: live link quality, service status and Go model connectivity with deepseek-v4.1-flash by default. Toggle the live probe and Go allowance in-widget, tune intervals, and store a dedicated key in the DSH credential store; usage, session cost and market share included."
+  }
+}

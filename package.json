@@ -1,0 +1,55 @@
+{
+  "name": "dsh-opencode",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Floating meter for opencode.ai: live link quality, service lamps, Go model connectivity, a real prompt probe, Go allowance meters, and in-widget controls for probe/allowance switches, intervals and a dedicated key stored in the DSH credential store.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "JAYcodr",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "opencode",
+    "status",
+    "monitor",
+    "usage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAYcodr/dsh-opencode.git"
+  },
+  "homepage": "https://github.com/JAYcodr/dsh-opencode",
+  "bugs": {
+    "url": "https://github.com/JAYcodr/dsh-opencode/issues"
+  }
+}

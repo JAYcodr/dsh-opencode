@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode 线路仪表",
+    "description": "在 Harness 边角悬浮显示 opencode.ai 的实时网络质量、服务状态与 Go 模型连通情况，默认聚焦 deepseek-v4.1-flash。可在仪表内开关实测探针与 Go 额度查询、调整间隔、保存专用 key（存 DSH 凭据库），并查看用量、会话成本与全站份额。"
+  }
+}

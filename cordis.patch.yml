@@ -1,0 +1,21 @@
+# OpenCode 线路仪表的 bundle 层。
+#
+# 一行：宿主半边（index.js）轮询 opencode.ai 的公开 JSON 并挂 /dsh-opencode 路由；
+# package.json 里的 dsh.client 让浏览器半边加载 shell.overlay 悬浮仪表。
+# 下面的 config 只是默认值：仪表「设置」页里的开关/间隔会覆盖它并持久化到
+# $DSH_HOME/plugin-data/dsh-opencode/settings.json；专用 key 存 DSH 凭据库，
+# 引用名 DSH_OPENCODE_PROBE_KEY（优先于 provider 的 OPENCODE_GO_API_KEY）。
+- insert:
+    - id: dsh-opencode
+      name: 'dsh-opencode'
+      config:
+        statusIntervalSeconds: 60
+        dataIntervalSeconds: 300
+        # 真实探针：复用 profile 里 Go provider 的凭据引用；不在这里写 key。
+        probeEnabled: true
+        probeIntervalSeconds: 600
+        probeKeyEnv: OPENCODE_GO_API_KEY
+        probeModel: deepseek-v4.1-flash
+        # Go 套餐额度（5 小时 / 周 / 月）：官方 usage 端点，只读百分比。
+        usageEnabled: true
+        usageIntervalSeconds: 120
